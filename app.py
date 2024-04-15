@@ -29,4 +29,5 @@ def add_email():
         return "Email added successfully!"
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
