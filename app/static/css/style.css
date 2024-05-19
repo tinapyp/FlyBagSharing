@@ -1,0 +1,50 @@
+/* Custom Theme Colors */
+:root {
+  --primary: #00baff;
+  --secondary: #705200;
+  --accent: #c60000;
+  --neutral: #001312;
+  --base-100: #fcfcfc;
+  --info: #4fabff;
+  --success: #779800;
+  --warning: #ff8b00;
+  --error: #ff9194;
+}
+
+body {
+  background-color: var(--base-100);
+  color: var(--neutral);
+}
+
+.navbar {
+  background-color: var(--primary);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--base-100) !important;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-danger {
+  background-color: var(--error);
+  border-color: var(--error);
+}
+
+.table thead th {
+  background-color: var(--neutral);
+  color: var(--base-100);
+}
+
+.table tbody tr:hover {
+  background-color: var(--accent);
+  color: var(--base-100);
+}
