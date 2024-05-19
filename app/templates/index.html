@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block title %}
+  FlyBagSharing
+{% endblock %}
+{% block content %}
+  <h1 class="my-4">Welcome to FlyBagSharing</h1>
+  <p class="lead">Share your flight baggage with others and make your travels more efficient.</p>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th>Departure Port</th>
+        <th>Arrival Port</th>
+        <th>Description</th>
+        <th>Contact</th>
+        <th>Posted By</th>
+        <th>Date Posted</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for listing in listings %}
+        <tr>
+          <td>{{ listing.departure_port }}</td>
+          <td>{{ listing.arrival_port }}</td>
+          <td>{{ listing.description }}</td>
+          <td>{{ listing.phone_number }}</td>
+          <td>{{ listing.author.username }}</td>
+          <td>{{ listing.date_posted.strftime('%Y-%m-%d') }}</td>
+          <td>
+            {% if listing.author == current_user %}
+              <form action="{{ url_for('delete_listing', listing_id=listing.id) }}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
