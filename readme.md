@@ -63,4 +63,4 @@ FlyBagSharing allows users to list their flight baggage details, including depar
     ```
 
 ## Contributing
-This project is open to contributions from developers of all skill levels! Whether you're fixing a bug, implementing a new feature, or improving documentation, your efforts can help make FlyBagSharing even better. for details about contributing, follow the [contriburing](contributing.md) doc
+This project is open to contributions from developers of all skill levels! Whether you're fixing a bug, implementing a new feature, or improving documentation, your efforts can help make FlyBagSharing even better. for details about contributing, follow the [contriburing](contributing.md) doc.
